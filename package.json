@@ -1,7 +1,7 @@
 {
   "name": "readme-doctor",
-  "version": "0.1.0",
-  "description": "Audit README files and generate practical improvement suggestions.",
+  "version": "0.1.1",
+  "description": "Maintainer-focused README audits for contributor onboarding and release readiness.",
   "type": "module",
   "bin": {
     "readme-doctor": "./bin/readme-doctor.js"
@@ -9,7 +9,9 @@
   "files": [
     "bin",
     "src",
+    "docs",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "exports": {
@@ -23,7 +25,10 @@
     "cli",
     "audit",
     "github",
-    "documentation"
+    "documentation",
+    "open-source",
+    "maintainer-tools",
+    "contributor-onboarding"
   ],
   "author": "chunjiegame-cpu",
   "repository": {

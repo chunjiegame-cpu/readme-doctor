@@ -4,9 +4,13 @@
 [![CI](https://github.com/chunjiegame-cpu/readme-doctor/actions/workflows/ci.yml/badge.svg)](https://github.com/chunjiegame-cpu/readme-doctor/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
-Audit a README before you publish. `readme-doctor` looks for the trust signals that experienced maintainers usually expect: a clear title, useful description, installation path, usage example, license, demo evidence, badges, and contribution notes.
+Audit a README before you publish or review a contributor-facing change. `readme-doctor` looks for the trust signals that experienced maintainers usually expect: a clear title, useful description, installation path, usage example, license, demo evidence, badges, and contribution notes.
 
 It is deliberately not a prose linter. The goal is to catch missing project information, not argue with your writing style.
+
+## Why Maintainers Use It
+
+Open-source maintainers repeatedly answer the same setup, usage, and contribution questions. README Doctor turns those recurring review comments into a fast local or CI check, which helps with contributor onboarding, release readiness, and documentation quality.
 
 ## Installation
 
@@ -90,6 +94,13 @@ jobs:
       - run: npx readme-doctor . --fail-under 80
 ```
 
+## Maintainer Workflow
+
+1. Run `readme-doctor . --write-suggestions` before releases or major README changes.
+2. Attach `README.suggestions.md` to a documentation issue when contributor onboarding feels unclear.
+3. Use `--fail-under` in CI for repositories where README quality is part of the release bar.
+4. Pair the JSON output with Codex or another review assistant to draft focused documentation fixes.
+
 ## Programmatic API
 
 ```js
@@ -121,6 +132,10 @@ node bin/readme-doctor.js . --json
 ```
 
 Changes to scoring rules should include a focused test and a README update when the user-facing behavior changes.
+
+## Codex for OSS Notes
+
+See [docs/codex-for-oss.md](./docs/codex-for-oss.md) for a concise maintainer-oriented project summary and API-credit usage plan.
 
 ## License
 
