@@ -1,0 +1,41 @@
+{
+  "name": "readme-doctor",
+  "version": "0.1.0",
+  "description": "Audit README files and generate practical improvement suggestions.",
+  "type": "module",
+  "bin": {
+    "readme-doctor": "./bin/readme-doctor.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "readme",
+    "cli",
+    "audit",
+    "github",
+    "documentation"
+  ],
+  "author": "chunjiegame-cpu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chunjiegame-cpu/readme-doctor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chunjiegame-cpu/readme-doctor/issues"
+  },
+  "homepage": "https://github.com/chunjiegame-cpu/readme-doctor#readme",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
